@@ -21,6 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
               'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
             maxZoom: 19,
           }).addTo(map);
+
+          let customIcon = L.icon({
+            iconUrl: "images/icon-location.svg",
+            iconSize: [40, 50],
+            iconAnchor: [22, 94],
+            popupAnchor: [-3, -76],
+          });
+
+          L.marker([lat, lng], { icon: customIcon }).addTo(map);
         });
     });
 });

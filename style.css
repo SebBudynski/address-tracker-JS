@@ -1,5 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  height: 100vh;
+}
+
+#top {
+  height: 40vh;
+  background-image: url("images/pattern-bg-desktop.png");
+  position: relative;
+}
+
+h1 {
+  position: absolute;
+  top: 10vh;
+  left: 40vw;
+  color: white;
+  font-weight: 500;
+}
+
+input {
+  position: absolute;
+  top: 20vh;
+  left: 32.5vw;
+  width: 35vw;
+  height: 7.5vh;
+  border-radius: 15px;
+  border: none;
+}
+
+.results {
+  position: absolute;
+  top: 30vh;
+  left: 15vw;
+  width: 70vw;
+  height: 17vh;
+  background-color: white;
+}
+
 #mapid {
-  height: 180px;
+  height: 60vh;
+  position: static;
 }
 
 .attribution {
