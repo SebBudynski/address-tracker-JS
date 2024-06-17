@@ -11,7 +11,7 @@ body {
 
 #top {
   height: 40vh;
-  background: url("images/pattern-bg-desktop.png") no-repeat center/100%;
+  background-image: url("images/pattern-bg-desktop.png");
   position: relative;
 }
 
