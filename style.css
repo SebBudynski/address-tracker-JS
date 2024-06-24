@@ -6,52 +6,101 @@
 
 body {
   font-family: "Rubik", sans-serif;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-#top {
-  height: 40vh;
-  background-image: url("images/pattern-bg-desktop.png");
-  position: relative;
+header {
+  background: url("images/pattern-bg-desktop.png") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem 7rem;
 }
 
 h1 {
-  position: absolute;
-  top: 10vh;
-  left: 40vw;
-  color: white;
-  font-weight: 500;
+  margin-bottom: 1.5rem;
 }
 
-input {
-  position: absolute;
-  top: 20vh;
-  left: 32.5vw;
-  width: 35vw;
-  height: 7.5vh;
-  border-radius: 15px;
+#search-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#search-input {
+  flex-grow: 1;
+  padding: 1rem;
   border: none;
+  border-radius: 15px 0 0 15px;
+  font-size: 18px;
 }
 
-.results {
-  position: absolute;
-  top: 30vh;
-  left: 15vw;
-  width: 70vw;
-  height: 17vh;
+#search-button {
+  background-color: black;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  padding: 0 1.5rem;
+  cursor: pointer;
+}
+
+main {
+  flex-grow: 1;
+  position: relative;
+}
+
+#info-panel {
   background-color: white;
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: -75px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1100px;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+  text-align: left;
+  padding: 0 1rem;
+}
+
+.info-item h2 {
+  font-size: 0.7rem;
+  color: #969696;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.info-item p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #2c2c2c;
 }
 
 #mapid {
-  height: 60vh;
-  position: static;
+  height: 100%;
+  min-height: 500px;
+  z-index: 1;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
+@media (max-width: 768px) {
+  header {
+    background: url("images/pattern-bg-mobile.png");
+  }
+  
+  #info-panel {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  .info-item {
+    margin-bottom: 1rem;
+  }
 }

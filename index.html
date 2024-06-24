@@ -3,42 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <title>Frontend Mentor | IP Address Tracker</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <title>IP Address Tracker</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="top"></div>
-    <div id="mapid"></div>
-    <h1>IP Address Tracker</h1>
-    <input
-      type="text"
-      placeholder="
-    Search for any IP address or domain"
-    />
-    <div class="results">IP Address Location Timezone UTC ISP</div>
+    <header>
+      <h1>IP Address Tracker</h1>
+      <form id="search-form">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for any IP address or domain"
+        />
+        <button type="submit" id="search-button">
+          <img src="images/icon-arrow.svg" alt="serch" />
+        </button>
+      </form>
+    </header>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <main>
+      <div id="info-panel">
+        <div class="info-item">
+          <h2>IP ADDRESS</h2>
+          <p id="ip-address">192.212.174.101</p>
+        </div>
+        <div class="info-item">
+          <h2>LOCATION</h2>
+          <p id="location">Brooklyn, NY 10001</p>
+        </div>
+        <div class="info-item">
+          <h2>TIMEZONE</h2>
+          <p id="timezone">UTC -05:00</p>
+        </div>
+        <div class="info-item">
+          <h2>ISP</h2>
+          <p id="isp">SpaceX Starlink</p>
+        </div>
+      </div>
+      <div id="mapid"></div>
+    </main>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="app.js" />
+    <script src="app.js"></script>
   </body>
 </html>
