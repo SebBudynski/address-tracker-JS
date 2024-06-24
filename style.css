@@ -1,3 +1,8 @@
+:root {
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +17,7 @@ body {
 }
 
 header {
-  background: url("images/pattern-bg-desktop.png") no-repeat center center/cover;
+  background: linear-gradient(to bottom, #3f3fdd, #5a5aff);
   color: white;
   text-align: center;
   padding: 2rem 1rem 7rem;
@@ -20,6 +25,7 @@ header {
 
 h1 {
   margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 
 #search-form {
@@ -34,14 +40,23 @@ h1 {
   border: none;
   border-radius: 15px 0 0 15px;
   font-size: 18px;
+  font-family: "Rubik", sans-serif;
 }
 
 #search-button {
-  background-color: black;
+  background-color: var(--very-dark-gray);
   border: none;
   border-radius: 0 15px 15px 0;
-  padding: 0 1.5rem;
+  padding: 0.8rem 1.5rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-button img {
+  width: 11px;
+  height: 14px;
 }
 
 main {
@@ -72,15 +87,16 @@ main {
 
 .info-item h2 {
   font-size: 0.7rem;
-  color: #969696;
+  color: var(--dark-gray);
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
+  font-weight: 700;
 }
 
 .info-item p {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #2c2c2c;
+  color: var(--very-dark-gray);
 }
 
 #mapid {
@@ -89,11 +105,7 @@ main {
   z-index: 1;
 }
 
-@media (max-width: 768px) {
-  header {
-    background: url("images/pattern-bg-mobile.png");
-  }
-  
+@media (max-width: 375px) {
   #info-panel {
     flex-direction: column;
     align-items: center;
@@ -102,5 +114,11 @@ main {
 
   .info-item {
     margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  #search-form {
+    max-width: 600px;
   }
 }
